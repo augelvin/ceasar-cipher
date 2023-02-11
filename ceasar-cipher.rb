@@ -7,7 +7,7 @@ def ceasar_cipher(text, key)
             if convertedIndex > 25
                 convertedIndex -= 26
             end
-            indeces.push(convertedIndex)
+            indices.push(convertedIndex)
         else
             indices.push(character)
         end
