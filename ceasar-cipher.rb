@@ -12,12 +12,17 @@ def ceasar_cipher(text, key)
             # get the character of the converted index
             convertedCharacter = alphabet[convertedIndex]
 
+            # capitalize character if it was capitalize
+            if character == character.upcase
+                convertedCharacter = convertedCharacter.upcase
+            end
+
             indices.push(convertedCharacter)
         else
             indices.push(character)
         end
     end
-    indices
+    indices.join()
 end
 
-puts ceasar_cipher('What a string!', 4)
+puts ceasar_cipher('What a String!', 4)
