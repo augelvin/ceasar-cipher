@@ -3,7 +3,11 @@ def ceasar_cipher(text, key)
     indices = []
     text.downcase.chars.each do |character| 
         if alphabet.include?(character)    
-            indices.push(alphabet.index(character))
+            convertedIndex = (alphabet.index(character) + key.to_i)
+            if convertedIndex > 25
+                convertedIndex -= 26
+            end
+            indeces.push(convertedIndex)
         else
             indices.push(character)
         end
